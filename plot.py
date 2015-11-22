@@ -1,8 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = np.loadtxt('readings.dat', skiprows=1, usecols=(2, 3))
-
 
 def plot(title, data):
     plt.plot(data)
@@ -20,9 +18,11 @@ def plot(title, data):
     plt.gca().axes.xaxis.set_ticklabels([])
 
 
+readings = np.loadtxt('readings.dat', skiprows=1, usecols=(2, 3))
+
 ax1 = plt.subplot(121)
-plot('Morning', data[::2])
+plot('Morning', readings[::2])
 plt.subplot(122, sharey=ax1)
-plot('Evening', data[1::2])
+plot('Evening', readings[1::2])
 
 plt.show()
