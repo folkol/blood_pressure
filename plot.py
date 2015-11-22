@@ -16,7 +16,8 @@ def plot(title, data):
     ], loc=2, fancybox=True)
     plt.axhline(sys.mean(), linestyle='--', linewidth=0.5)
     plt.axhline(dia.mean(), linestyle='--', linewidth=0.5)
-    plt.xticks([])
+    # plt.xticks([])
+    plt.gca().axes.xaxis.set_ticklabels([])
 
 
 ax1 = plt.subplot(121)
