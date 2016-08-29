@@ -1,5 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def plot(title, data):
@@ -25,5 +25,3 @@ ax1 = plt.subplot(121)
 plot('Morning', readings[::2])
 plt.subplot(122, sharey=ax1)
 plot('Evening', readings[1::2])
-
-plt.show()
